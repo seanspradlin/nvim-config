@@ -1,0 +1,17 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "lua",
+    "css",
+    "Markdown",
+    "javascript",
+    "json",
+    "typescriptreact",
+    "typescript",
+    "javascriptreact",
+    "tsx",
+    "jsx"
+  ],
+  "javascript.suggestionActions.enabled": false,
+  "javascript.showUnused": false,
+  "eslint.autoFixOnSave": true
+}

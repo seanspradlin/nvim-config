@@ -8,6 +8,13 @@ return require('packer').startup(function(use)
 	-- Package Manager
 	use 'wbthomason/packer.nvim'
 
+    -- LSP
+    use {
+        'neoclide/coc.nvim',
+        branch = 'release',
+        run = ':CocInstall coc-eslint coc-css coc-tsserver coc-pyright coc-lua'
+    }
+
 	-- Git
 	use {
 		'lewis6991/gitsigns.nvim',
@@ -19,7 +26,7 @@ return require('packer').startup(function(use)
         end
 	}
     use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
-	
+
 	-- -- File Finder
 	use {
 		'nvim-telescope/telescope.nvim',
@@ -28,7 +35,7 @@ return require('packer').startup(function(use)
             require('file-finder')
 		end
 	}
-	
+
 	-- Colors
 	use {
 		'rose-pine/neovim',
@@ -53,10 +60,10 @@ return require('packer').startup(function(use)
 			require('modes').setup()
 		end
 	}
-	
+
 	-- RGB color picker for css
 	use 'norcalli/nvim-colorizer.lua'
-	
+
 	-- Tab Bars
 	use {
 		'romgrk/barbar.nvim',
@@ -76,7 +83,7 @@ return require('packer').startup(function(use)
             require('status-bar')
 		end
 	}
-	
+
 	-- Utils
 	use {
 		'folke/which-key.nvim',
