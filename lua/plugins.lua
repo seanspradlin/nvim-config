@@ -18,7 +18,7 @@ return require('packer').startup(function(use)
             require('gitsigns').setup()
         end
 	}
-    use 'kdheepak/lazygit.nvim'
+    use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 	
 	-- -- File Finder
 	use {

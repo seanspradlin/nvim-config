@@ -32,7 +32,7 @@ wk.register({
         },
     },
     g = {
-        ':LazyGit<cr>', 'Git'
+        '<cmd>lua require("neogit").open({ kind = "split" })<cr>', 'Git'
     },
     e = {
         ':NvimTreeToggle<cr>', 'File Explorer'
