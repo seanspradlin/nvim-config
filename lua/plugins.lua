@@ -14,14 +14,18 @@ return require('packer').startup(function(use)
 		requires = {
 			'nvim-lua/plenary.nvim'
 		},
+        config = function()
+            require('gitsigns').setup()
+        end
 	}
+    use 'kdheepak/lazygit.nvim'
 	
 	-- -- File Finder
 	use {
 		'nvim-telescope/telescope.nvim',
 		requires = { {'nvim-lua/plenary.nvim'} },
 		config = function()
-		require('file-finder')
+            require('file-finder')
 		end
 	}
 	
@@ -30,7 +34,7 @@ return require('packer').startup(function(use)
 		'rose-pine/neovim',
 		as = 'rose-pine',
 		config = function()
-		require('colorscheme')
+            require('colorscheme')
 		end
 	}
 	use {
@@ -38,7 +42,7 @@ return require('packer').startup(function(use)
 		branch = '0.5-compat',
 		run = ':TSUpdate',
 		config = function()
-		require('highlighting')
+            require('highlighting')
 		end
 	}
 	use{
@@ -62,14 +66,14 @@ return require('packer').startup(function(use)
 		'kyazdani42/nvim-tree.lua',
 		requires = {'kyazdani42/nvim-web-devicons'},
 		config = function()
-		require('tree')
+            require('tree')
 		end
 	}
 	use {
 		'nvim-lualine/lualine.nvim',
 		requires = {'kyazdani42/nvim-web-devicons', opt = true},
 		config = function()
-		require('status-bar')
+            require('status-bar')
 		end
 	}
 	
@@ -78,7 +82,7 @@ return require('packer').startup(function(use)
 	use {
 		'folke/which-key.nvim',
 		config = function()
-		require('key-hint')
+            require('key-hint')
 		end
 	}
   if packer_bootstrap then

@@ -31,6 +31,9 @@ wk.register({
             "<cmd>lua require('telescope.builtin').help_tags()<cr>", 'Help'
         },
     },
+    g = {
+        ':LazyGit<cr>', 'Git'
+    },
     e = {
         ':NvimTreeToggle<cr>', 'File Explorer'
     },
