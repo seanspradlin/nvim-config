@@ -12,7 +12,7 @@ return require('packer').startup(function(use)
     use {
         'neoclide/coc.nvim',
         branch = 'release',
-        run = ':CocInstall coc-eslint coc-css coc-tsserver coc-pyright coc-lua'
+        run = ':CocInstall coc-eslint coc-css coc-tsserver coc-pyright coc-sumneko-lua'
     }
 
 	-- Git
@@ -25,9 +25,17 @@ return require('packer').startup(function(use)
             require('gitsigns').setup()
         end
 	}
-    use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+    use {
+      'TimUntersberger/neogit',
+      requires = 'nvim-lua/plenary.nvim',
+      config = function()
+        require('neogit').setup({
+          disable_commit_confirmation = true
+        })
+      end
+    }
 
-	-- -- File Finder
+	-- File Finder
 	use {
 		'nvim-telescope/telescope.nvim',
 		requires = { {'nvim-lua/plenary.nvim'} },
@@ -94,4 +102,6 @@ return require('packer').startup(function(use)
   if packer_bootstrap then
     require('packer').sync()
   end
+  use 'tpope/vim-commentary'
+  use 'tpope/vim-abolish'
 end)
