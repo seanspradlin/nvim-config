@@ -8,11 +8,13 @@ return require('packer').startup(function(use)
 	-- Package Manager
 	use 'wbthomason/packer.nvim'
 
+  use 'nvim-lua/plenary.nvim'
+
     -- LSP
     use {
         'neoclide/coc.nvim',
         branch = 'release',
-        run = ':CocInstall coc-eslint coc-css coc-tsserver coc-pyright coc-sumneko-lua'
+        run = ':CocInstall coc-eslint coc-css coc-tsserver coc-pyright coc-sumneko-lua coc-pairs'
     }
 
 	-- Git
