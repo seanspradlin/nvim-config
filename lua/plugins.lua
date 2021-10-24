@@ -7,7 +7,7 @@ end
 return require('packer').startup(function(use)
 	-- Package Manager
 	use 'wbthomason/packer.nvim'
-	
+
 	-- Git
 	use {
 		'lewis6991/gitsigns.nvim',
@@ -78,7 +78,6 @@ return require('packer').startup(function(use)
 	}
 	
 	-- Utils
-	use 'lukas-reineke/indent-blankline.nvim'
 	use {
 		'folke/which-key.nvim',
 		config = function()
