@@ -15,12 +15,14 @@ set shiftwidth=2
 set expandtab
 
 set number relativenumber
+set noshowmode
+set noruler
+set noshowcmd
+set cmdheight=1
 
 " COC-Specific
 set nobackup
 set nowritebackup
-set cmdheight=2
-" set signcolumn=number
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
