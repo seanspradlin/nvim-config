@@ -8,8 +8,6 @@ return require('packer').startup(function(use)
 	-- Package Manager
 	use 'wbthomason/packer.nvim'
 
-  use 'nvim-lua/plenary.nvim'
-
     -- LSP
     use {
         'neoclide/coc.nvim',
@@ -20,16 +18,14 @@ return require('packer').startup(function(use)
 	-- Git
 	use {
 		'lewis6991/gitsigns.nvim',
-		requires = {
-			'nvim-lua/plenary.nvim'
-		},
+		requires = {'nvim-lua/plenary.nvim'},
         config = function()
             require('gitsigns').setup()
         end
 	}
     use {
       'TimUntersberger/neogit',
-      requires = 'nvim-lua/plenary.nvim',
+      requires = {'nvim-lua/plenary.nvim'},
       config = function()
         require('neogit').setup({
           disable_commit_confirmation = true
@@ -40,7 +36,7 @@ return require('packer').startup(function(use)
 	-- File Finder
 	use {
 		'nvim-telescope/telescope.nvim',
-		requires = { {'nvim-lua/plenary.nvim'} },
+		requires = { 'nvim-lua/plenary.nvim' },
 		config = function()
             require('file-finder')
 		end
