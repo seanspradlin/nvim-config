@@ -8,10 +8,12 @@ require('nvim-tree').setup({
 		      warning = "",
 		      error = "",
 		}
-	}
+	},
+  filters = {
+    dotfiles = true
+  }
 })
 
 vim.g.nvim_tree_gitignore = 1
 vim.g.nvim_tree_quit_on_open = 1
-vim.g.nvim_tree_hide_dotfiles = 1
 
