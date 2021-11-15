@@ -1,4 +1,13 @@
 {
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": ["terraform", "tf"],
+      "initializationOptions": {},
+      "settings": {}
+    }
+  },
   "coc.preferences.formatOnSaveFiletypes": [
     "lua",
     "css",
@@ -9,10 +18,11 @@
     "typescript",
     "javascriptreact",
     "tsx",
-    "jsx"
+    "jsx",
+    "terraform",
+    "tf"
   ],
   "javascript.suggestionActions.enabled": false,
   "javascript.showUnused": false,
-  "eslint.autoFixOnSave": true,
-  "eslint.enable": true
+  "eslint.autoFixOnSave": true
 }

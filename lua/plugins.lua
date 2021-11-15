@@ -17,6 +17,7 @@ return require('packer').startup(function(use)
         branch = 'release',
         run = ':CocInstall coc-eslint coc-css coc-tsserver coc-pyright coc-sumneko-lua coc-pairs'
     }
+    use 'hashivim/vim-terraform'
 
     -- Git
     use {
